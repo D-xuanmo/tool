@@ -5,3 +5,4 @@
   2. [使用canvas生成简易验证码](./js/canvasCode.js)
 
 - [scss](./scss.md)
+- [js](./js.md)
