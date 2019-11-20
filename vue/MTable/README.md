@@ -20,7 +20,7 @@ Vue.component(MTableColumn.name, MTableColumn)
 </m-table>
 ```
 
-## Table Attributes
+## Table props
 
 字段名|描述|类型|默认值|可选值|是否必填
 :-:|:-:|:-:|:-:|:-:|:-:
@@ -43,6 +43,17 @@ row-style|自定义行css，函数需返回`Object`|Object/Function({row, rowInd
 cell-render|自定义列渲染内容|Function({row, col, rowIndex, colIndex})|-|-|N
 cell-style|自定义列css|Object/Function({row, col, rowIndex, colIndex})|-|-|N
 cell-class-name|自定义列类名|String/Function({row, col, rowIndex, colIndex})|-|-|N
+
+## Table column props
+
+字段名|描述|类型|默认值|可选值|是否必填
+:-:|:-:|:-:|:-:|:-:|:-:
+type|展示类型，为`index`时当前列展示循环索引值|String/Array|-|index|N
+label|列表头文字，为`Array`时每个数组的子项都会独占一行|String|-|-|N
+name|用于渲染当前列的字段|String|-|-|N
+width|当前列宽度|String/Number|-|-|N
+is-percent|是否显示为百分比|Boolean|-|-|N
+is-thousand-digit|是否需要千分位|Boolean|-|-|N
 
 ## Table Events
 
