@@ -1,0 +1,148 @@
+$border-color: #E8E8E8;
+$color-text: #606266;
+$color-bg: #ebeef5;
+$border-radius: 6px;
+
+.x-table {
+  width: 100%;
+  // border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  color: $color-text;
+  word-break: break-all;
+
+  &.algin-left {
+    text-align: left;
+  }
+
+  &.algin-center {
+    text-align: center;
+  }
+
+  &.algin-right {
+    text-align: right;
+  }
+
+  &.border-dashed {
+    th,
+    td {
+      border-style: dashed !important;
+    }
+  }
+
+  &.border-dotted {
+    th,
+    td {
+      border-style: dotted !important;
+    }
+  }
+
+  &.is-radius {
+    th,
+    td {
+      &:first-of-type {
+        border-left: 0;
+        border-radius: $border-radius 0 0 $border-radius;
+      }
+      &:last-of-type {
+        border-right: 0;
+        border-radius: 0 $border-radius $border-radius 0;
+      }
+    }
+
+    th,
+    td {
+      border: {
+        width: 0 0 1px 1px !important;
+        style: solid;
+        color: #fff;
+      }
+    }
+
+    .x-table__row {
+      &:last-of-type {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    thead {
+      tr {
+        &:not(:first-child) {
+          th {
+            border: {
+              width: 0 0 1px 1px !important;
+              style: solid;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.is-stripe {
+    .x-table__row {
+      &:nth-of-type(odd) {
+        td {
+          background-color: #ebeef5;
+        }
+      }
+      &:nth-of-type(even) {
+        td {
+          background-color: #f4f7fd;
+        }
+      }
+    }
+  }
+
+  &.is-border {
+    th,
+    td {
+      border: {
+        width: 1px 0 0 1px;
+        style: solid;
+        color: $border-color;
+      }
+
+      &:last-of-type {
+        border-right: 1px solid $border-color;
+      }
+    }
+    tr {
+      &:last-of-type {
+        td {
+          border-bottom: 1px solid $border-color;
+        }
+      }
+    }
+  }
+
+  &.no-header-cell-bg {
+    th {
+      background: none;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  th,
+  td {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+
+  th {
+    padding: 10px 5px;
+    word-break: keep-all;
+  }
+
+  td {
+    padding: 10px 5px;
+  }
+}
