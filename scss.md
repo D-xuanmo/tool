@@ -1,13 +1,42 @@
-### 兼容IE透明度
 ```scss
+// 文字对齐
+$align: left, center, right, justify;
+@each $str in $align {
+  .align-#{$str} {
+    text-align: $str;
+  }
+}
+```
+
+```scss
+$margin: (
+  top: 5 10 15 20,
+  right: 5 10 15 20,
+  bottom: 5 10 15 20,
+  left: 5 10 15 20
+);
+$marginDirection: margin, padding;
+@each $direction, $value in $margin {
+  @each $num in $value {
+    @each $d in $marginDirection {
+      .#{str-slice($d, 1, 1)}-#{str-slice($direction, 1, 1)}-#{$num}px {
+        #{$d}-#{$direction}: #{$num}px;
+      }
+    }
+  }
+}
+```
+
+```scss
+// 兼容 IE 透明度
 @mixin opacity($number: 0.5) {
   opacity: $number;
   filter: alpha(opacity=#{$number * 100});
 }
 ```
 
-### input placeholder颜色兼容
 ```scss
+// Input placeholder 颜色兼容
 @mixin placeholderColor($color: #fff) {
   &::-webkit-input-placeholder {
     color: $color;
@@ -30,8 +59,8 @@
 }
 ```
 
-### 多行文字显示省略号
 ```scss
+// 多行文字显示省略号
 @mixin ellipsisMultiline($number: 1) {
   display: -webkit-box;
   overflow: hidden;
