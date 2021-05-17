@@ -20,3 +20,26 @@ function countDown (during, duringCallback, endCallback, timer) {
   }
 }
 ```
+
+```js
+/**
+ * 防抖
+ * @param {Function} fn 执行函数
+ * @param {Number} wait 等待时间，毫秒
+ * @param {Boolean} immediate 是否立即执行
+ */
+function debounce (fn, wait = 0, immediate = false) {
+  let timer = null
+  let _immediate = immediate
+  return function () {
+    if (_immediate) {
+      fn.apply(this, arguments)
+      _immediate = false
+    }
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      immediate ? (_immediate = true) : fn.apply(this, arguments)
+    }, wait)
+  }
+}
+```
