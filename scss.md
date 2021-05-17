@@ -1,5 +1,5 @@
 ```scss
-// 文字对齐
+// 文字对齐；使用：align-left
 $align: left, center, right, justify;
 @each $str in $align {
   .align-#{$str} {
@@ -9,6 +9,7 @@ $align: left, center, right, justify;
 ```
 
 ```scss
+// 内外边距；使用：m-t-5px 或 p-t-5px
 $margin: (
   top: 5 10 15 20,
   right: 5 10 15 20,
