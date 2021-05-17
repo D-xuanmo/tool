@@ -2,7 +2,6 @@
 
 - [Scss](./scss.md)
 - [JavaScript](./js.md)
-- js
   - [图片压缩简易版](./js/imageCompress.js)
   - [使用canvas生成简易验证码](./js/canvasCode.js)
 - vue组件
