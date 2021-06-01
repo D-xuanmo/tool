@@ -1,5 +1,14 @@
 ```js
 /**
+ * 是否为对象
+ * @param {*} obj 任意数据
+ * @returns {boolean}
+ */
+const isObject = obj => Object.prototype.toString.call(obj) === '[object Object]'
+```
+
+```js
+/**
  * 倒计时
  * @param {number} during 倒计时总时间，单位：s
  * @param {function} duringCallback 计时期间的回调函数
