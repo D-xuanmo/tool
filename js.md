@@ -1,10 +1,10 @@
 ```js
 /**
  * 倒计时
- * @param {[number]} during [倒计时总时间，单位：s]
- * @param {[function]} duringCallback [计时期间的回调函数]
- * @param {[function]} endCallback [计时结束的回调函数]
- * @param {[string]} timer [定时器的名字，用于清除定时器]
+ * @param {number} during 倒计时总时间，单位：s
+ * @param {function} duringCallback 计时期间的回调函数
+ * @param {function} endCallback 计时结束的回调函数
+ * @param {string} timer 定时器的名字，用于清除定时器
  */
 function countDown (during, duringCallback, endCallback, timer) {
   during = +during;
@@ -24,9 +24,9 @@ function countDown (during, duringCallback, endCallback, timer) {
 ```js
 /**
  * 防抖
- * @param {Function} fn 执行函数
- * @param {Number} wait 等待时间，毫秒
- * @param {Boolean} immediate 是否立即执行
+ * @param {function} fn 执行函数
+ * @param {number} wait 等待时间，毫秒
+ * @param {boolean} immediate 是否立即执行
  */
 function debounce (fn, wait = 0, immediate = false) {
   let timer = null

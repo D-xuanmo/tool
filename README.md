@@ -7,6 +7,7 @@
   - [使用canvas生成简易验证码](./js/canvasCode.js)
   - [时间格式化](https://github.com/D-xuanmo/datejs)
   - [获取浏览器信息](https://github.com/D-xuanmo/browser-info)
+  - [深拷贝](./js/deepCopy.md)
 - vue组件
   - [移动端表格](./vue/MTable/README.md)
   - [颜色选择器](https://github.com/D-xuanmo/vue-color-picker)
