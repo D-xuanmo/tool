@@ -3,6 +3,7 @@
 - [CSS 样式重置](https://github.com/D-xuanmo/normalize.css)
 - [Scss](./scss.md)
 - [JavaScript](./js.md)
+  - [JavaScript Utils](https://github.com/D-xuanmo/javascript-utils)
   - [图片压缩简易版](./js/imageCompress.js)
   - [使用canvas生成简易验证码](./js/canvasCode.js)
   - [时间格式化](https://github.com/D-xuanmo/datejs)
